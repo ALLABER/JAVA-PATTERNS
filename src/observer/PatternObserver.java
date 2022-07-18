@@ -1,7 +1,15 @@
 package observer;
 
+import observer.model.Parishioner;
+
 public class PatternObserver {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        CatholicChurch catholicChurch = new CatholicChurch();
+
+        new Parishioner("Мартин Лютер", catholicChurch);
+        new Parishioner("Жан Кальвин", catholicChurch);
+
+        catholicChurch.setNewsChurch("Инквизиция была ошибкой... месса Mea Culpa 12 марта 2000 года");
     }
 }
